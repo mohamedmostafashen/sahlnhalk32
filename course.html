@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكورسات</title>
+
+    <!-- استيراد خط Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- دمج CSS داخل HTML -->
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            direction: rtl;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        section.courses {
+            padding: 40px;
+            background-color: #e9e9e9;
+        }
+
+        .course-grid {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .course {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+        }
+
+        .course h3 {
+            margin-bottom: 15px;
+            color: #4CAF50;
+            font-size: 24px;
+        }
+
+        .course p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .course button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .course button:hover {
+            background-color: #45a049;
+        }
+
+        .content {
+            display: none;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- الرأس (Header) -->
+    <header>
+        <h1>الكورسات المتاحة</h1>
+    </header>
+
+    <!-- قسم الكورسات (Courses Section) -->
+    <section class="courses">
+        <h2>الكورسات</h2>
+        <div class="course-grid">
+            <div class="course">
+                <h3>كورس النحو</h3>
+                <p>المحاضرات: 10</p>
+                <button onclick="joinCourse('content1')">اشترك الآن</button>
+                <div class="content" id="content1">
+                    <h4>محتويات الكورس:</h4>
+                    <ul>
+                        <li>المحاضرة 1: مقدمة في النحو</li>
+                        <li>المحاضرة 2: أنواع الجمل</li>
+                        <li>المحاضرة 3: الإعراب</li>
+                        <li>المحاضرة 4: الجملة الفعلية</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="course">
+                <h3>كورس البلاغة</h3>
+                <p>المحاضرات: 8</p>
+                <button onclick="joinCourse('content2')">اشترك الآن</button>
+                <div class="content" id="content2">
+                    <h4>محتويات الكورس:</h4>
+                    <ul>
+                        <li>المحاضرة 1: تعريف البلاغة</li>
+                        <li>المحاضرة 2: التشبيه</li>
+                        <li>المحاضرة 3: الاستعارة</li>
+                        <li>المحاضرة 4: الكناية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل (Footer) -->
+    <footer>
+        <p>حقوق الطبع والنشر © 2024 المنصة التعليمية</p>
+    </footer>
+
+    <!-- سكريبت -->
+    <script>
+        function joinCourse(contentId) {
+            // إظهار المحتوى الخاص بالكورس
+            const content = document.getElementById(contentId);
+            content.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

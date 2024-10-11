@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدفع</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="payment">
+        <h2>إتمام الدفع</h2>
+        <form action="/pay" method="POST">
+            <label for="card-number">رقم البطاقة</label>
+            <input type="text" id="card-number" name="card-number" required>
+
+            <label for="expiry-date">تاريخ الانتهاء</label>
+            <input type="text" id="expiry-date" name="expiry-date" required>
+
+            <label for="cvv">الرمز السري CVV</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <button type="submit">ادفع الآن</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>حقوق الطبع والنشر © 2024 المنصة التعليمية</p>
+    </footer>
+</body>
+
+</html>
